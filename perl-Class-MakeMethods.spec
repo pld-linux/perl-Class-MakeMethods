@@ -1,6 +1,7 @@
 #
 # Conditional build:
 # _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Class
 %define		pnam	MakeMethods
@@ -39,8 +40,6 @@ perl -pi -e 's/^(require 5.003)(07;)(.*)$/$1_$2$3/' MakeMethods.pm
 %build
 perl Makefile.PL
 %{__make}
-# %{__make} OPTIMIZE="%{rpmcflags}"
-
 %{!?_without_tests:%{__make} test}
 
 %install
