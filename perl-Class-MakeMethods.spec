@@ -10,7 +10,8 @@ Summary(pl):	Class::MakeMethods - generowanie ogólnych typów metod
 Name:		perl-Class-MakeMethods
 Version:	1.009
 Release:	1
-License:	GPL or Artistic
+# same as perl
+License:	GPL v1+ or Artistic
 Vendor:		M. Simon Cavalletto <simonm@cavalletto.org>
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
