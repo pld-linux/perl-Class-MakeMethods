@@ -36,10 +36,10 @@ generowane dynamicznie i instalowane w pakiecie, który je wywo³uje.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
-perl -pi -e 's/^(require 5.003)(07;)(.*)$/$1_$2$3/' MakeMethods.pm
+%{__perl} -pi -e 's/^(require 5.003)(07;)(.*)$/$1_$2$3/' MakeMethods.pm
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make}
 %{!?_without_tests:%{__make} test}
 
