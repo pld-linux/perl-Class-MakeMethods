@@ -8,14 +8,14 @@
 Summary:	Class::MakeMethods - generate common types of methods
 Summary(pl):	Class::MakeMethods - generowanie ogólnych typów metod
 Name:		perl-Class-MakeMethods
-Version:	1.009
+Version:	1.01
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Vendor:		M. Simon Cavalletto <simonm@cavalletto.org>
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	ab3240ff45f2351a7a8b52026728c513
+# Source0-md5:	838c98dcf1b1fff4c5d8cffaec32ebbb
 URL:		http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.readme
 %if %{with tests}
 BuildRequires:	perl-Test-Simple
@@ -71,6 +71,7 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorlib}/Class/MakeMethods/Basic
 %{perl_vendorlib}/Class/MakeMethods/Composite
 %{perl_vendorlib}/Class/MakeMethods/Emulator
+%{perl_vendorlib}/Class/MakeMethods/Evaled
 %{perl_vendorlib}/Class/MakeMethods/Standard
 %{perl_vendorlib}/Class/MakeMethods/Template
 %{perl_vendorlib}/Class/MakeMethods/Utility
