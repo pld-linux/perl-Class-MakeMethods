@@ -18,6 +18,9 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 URL:		http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.readme
 BuildRequires:	perl >= 5.6
 BuildRequires:	rpm-perlprov >= 4.0.2-104
+%if 0%{!?_without_tests:1}
+BuildRequires:	perl-Test-Simple
+%endif
 Provides:	%{name}-Template = 1.005
 Obsoletes:	%{name}-Template < 1.005
 BuildArch:	noarch
