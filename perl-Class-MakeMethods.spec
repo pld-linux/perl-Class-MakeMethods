@@ -14,6 +14,7 @@ License:	GPL or Artistic
 Vendor:		M. Simon Cavalletto <simonm@cavalletto.org>
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	bb665e41f9834f342ecd123e9b7292c6
 URL:		http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.readme
 BuildRequires:	perl >= 5.6
 BuildRequires:	rpm-perlprov >= 4.0.2-104
