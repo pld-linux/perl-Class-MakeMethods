@@ -20,7 +20,7 @@ URL:		http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.r
 %if %{with tests}
 BuildRequires:	perl-Test-Simple
 %endif
-BuildRequires:	perl-devel >= 5.8.0
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 Provides:	%{name}-Template = 1.005
 Obsoletes:	%{name}-Template < 1.005
