@@ -1,6 +1,6 @@
 #
 # Conditional build:
-# _without_tests - do not perform "make test"
+%bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Class
@@ -8,18 +8,18 @@
 Summary:	Class::MakeMethods - generate common types of methods
 Summary(pl):	Class::MakeMethods - generowanie ogólnych typów metod
 Name:		perl-Class-MakeMethods
-Version:	1.008
+Version:	1.009
 Release:	1
 License:	GPL or Artistic
 Vendor:		M. Simon Cavalletto <simonm@cavalletto.org>
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	a4dc500af63d8612eb4065cf0d14c66d
+# Source0-md5:	ab3240ff45f2351a7a8b52026728c513
 URL:		http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.readme
-%if 0%{!?_without_tests:1}
+%if %{with tests}
 BuildRequires:	perl-Test-Simple
 %endif
-BuildRequires:	perl-devel >= 5.6
+BuildRequires:	perl-devel >= 5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 Provides:	%{name}-Template = 1.005
 Obsoletes:	%{name}-Template < 1.005
@@ -51,7 +51,7 @@ generowane dynamicznie i instalowane w pakiecie, który je wywo³uje.
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 %{__make}
-%{!?_without_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
