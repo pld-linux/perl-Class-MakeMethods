@@ -16,18 +16,18 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	bb665e41f9834f342ecd123e9b7292c6
 URL:		http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.readme
-BuildRequires:	perl-devel >= 5.6
-BuildRequires:	rpm-perlprov >= 4.1-13
 %if 0%{!?_without_tests:1}
 BuildRequires:	perl-Test-Simple
 %endif
+BuildRequires:	perl-devel >= 5.6
+BuildRequires:	rpm-perlprov >= 4.1-13
 Provides:	%{name}-Template = 1.005
 Obsoletes:	%{name}-Template < 1.005
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # this belongs to unfinished code - we have no choice...
-%define		_noautoreq	"perl(Class::MakeMethods::Template::Array)"
+%define		_noautoreq	'perl(Class::MakeMethods::Template::Array)'
 
 %description
 The Class::MakeMethods framework allows Perl class developers to
