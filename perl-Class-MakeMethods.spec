@@ -6,7 +6,7 @@
 %define		pdir	Class
 %define		pnam	MakeMethods
 Summary:	Class::MakeMethods - generate common types of methods
-Summary(pl):	Class::MakeMethods - generowanie ogólnych typów metod
+Summary(pl.UTF-8):   Class::MakeMethods - generowanie ogÃ³lnych typÃ³w metod
 Name:		perl-Class-MakeMethods
 Version:	1.01
 Release:	1
@@ -37,12 +37,12 @@ of Class::MakeMethods, it can select from the supported method types,
 and specify a name for each method desired. The methods are
 dynamically generated and installed in the calling package.
 
-%description -l pl
-Szkielet Class::MakeMethods umo¿liwia deweloperom Perla szybkie
-definiowanie ogólnych typów metod. Gdy modu³ korzysta z podklasy
-klasy Class::MakeMethods, mo¿e on dokonywaæ wyboru spo¶ród wspieranych
-typów metod i podaje nazwê ka¿dej z ¿±danych metod. Metody s±
-generowane dynamicznie i instalowane w pakiecie, który je wywo³uje.
+%description -l pl.UTF-8
+Szkielet Class::MakeMethods umoÅ¼liwia deweloperom Perla szybkie
+definiowanie ogÃ³lnych typÃ³w metod. Gdy moduÅ‚ korzysta z podklasy
+klasy Class::MakeMethods, moÅ¼e on dokonywaÄ‡ wyboru spoÅ›rÃ³d wspieranych
+typÃ³w metod i podaje nazwÄ™ kaÅ¼dej z Å¼Ä…danych metod. Metody sÄ…
+generowane dynamicznie i instalowane w pakiecie, ktÃ³ry je wywoÅ‚uje.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
