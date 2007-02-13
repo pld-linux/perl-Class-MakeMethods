@@ -6,7 +6,7 @@
 %define		pdir	Class
 %define		pnam	MakeMethods
 Summary:	Class::MakeMethods - generate common types of methods
-Summary(pl.UTF-8):   Class::MakeMethods - generowanie ogólnych typów metod
+Summary(pl.UTF-8):	Class::MakeMethods - generowanie ogólnych typów metod
 Name:		perl-Class-MakeMethods
 Version:	1.01
 Release:	1
