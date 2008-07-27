@@ -9,7 +9,7 @@ Summary:	Class::MakeMethods - generate common types of methods
 Summary(pl.UTF-8):	Class::MakeMethods - generowanie ogólnych typów metod
 Name:		perl-Class-MakeMethods
 Version:	1.01
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Vendor:		M. Simon Cavalletto <simonm@cavalletto.org>
