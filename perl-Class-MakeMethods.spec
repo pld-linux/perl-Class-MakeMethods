@@ -12,18 +12,17 @@ Version:	1.01
 Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
-Vendor:		M. Simon Cavalletto <simonm@cavalletto.org>
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	838c98dcf1b1fff4c5d8cffaec32ebbb
-URL:		http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.readme
+URL:		http://search.cpan.org/dist/Class-MakeMethods/
 %if %{with tests}
 BuildRequires:	perl-Test-Simple
 %endif
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 Provides:	%{name}-Template = 1.005
-Obsoletes:	%{name}-Template < 1.005
+Obsoletes:	perl-Class-MakeMethods-Template < 1.005
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -39,10 +38,10 @@ dynamically generated and installed in the calling package.
 
 %description -l pl.UTF-8
 Szkielet Class::MakeMethods umożliwia deweloperom Perla szybkie
-definiowanie ogólnych typów metod. Gdy moduł korzysta z podklasy
-klasy Class::MakeMethods, może on dokonywać wyboru spośród wspieranych
-typów metod i podaje nazwę każdej z żądanych metod. Metody są
-generowane dynamicznie i instalowane w pakiecie, który je wywołuje.
+definiowanie ogólnych typów metod. Gdy moduł korzysta z podklasy klasy
+Class::MakeMethods, może on dokonywać wyboru spośród wspieranych typów
+metod i podaje nazwę każdej z żądanych metod. Metody są generowane
+dynamicznie i instalowane w pakiecie, który je wywołuje.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
